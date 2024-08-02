@@ -15,7 +15,7 @@ jobs:
 
     - name: Execute Python script for decoding
       run: |
-        python decode.py
+        python src/decode.py
     - name: Save decoded output to repository
       run: |
         git add output.py
