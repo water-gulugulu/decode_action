@@ -16,6 +16,10 @@ jobs:
     - name: Execute Python script for decoding
       run: |
         python src/decode.py
+    - name: Configure Git author
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "action"
     - name: Save decoded output to repository
       run: |
         git add output.py
