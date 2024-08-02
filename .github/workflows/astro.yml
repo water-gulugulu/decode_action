@@ -1,0 +1,25 @@
+name: Decode Python File
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Execute Python script for decoding
+      run: |
+        python decode.py
+    - name: Save decoded output to repository
+      run: |
+        git add output.py
+        git commit -m "Add decoded output file"
+        git push
+        
+        
