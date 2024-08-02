@@ -93,5 +93,5 @@ with open('./input.py', 'r') as file:
 final_decrypted_data = decrypt_nested(encoded_data)
 # 输出最终解密结果
 #print("最终解密结果:")
-with open("./onput.py", 'wb') as f:
+with open("./output.py", 'wb') as f:
     f.write(final_decrypted_data)
