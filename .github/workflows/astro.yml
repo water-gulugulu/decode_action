@@ -22,7 +22,7 @@ jobs:
         git config --local user.name "action"
     - name: Save decoded output to repository
       run: |
-        git add output.py
+        git add src/output.py
         git commit -m "Add decoded output file"
         git push
         
